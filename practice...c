@@ -902,44 +902,120 @@ int main() {
    
 
     
-    int marks[5];
-    int total = 0;
-    float percentage;
+ //   int marks[5];
+ //   int total = 0;
+ //   float percentage;
 
-    printf("Enter marks of 5 subjects:\n");
+ //   printf("Enter marks of 5 subjects:\n");
     
-    for(int i = 0; i < 5; i++)
-    {
-        printf("Subject %d: ", i + 1); 
-        scanf("%d", &marks[i]);
-        total = total + marks[i];
-    }
+ //   for(int i = 0; i < 5; i++)
+ //   {
+ //       printf("Subject %d: ", i + 1); 
+ //       scanf("%d", &marks[i]);
+ //       total = total + marks[i];
+ //   }
 
-    percentage = total / 5.0;
+ //   percentage = total / 5.0;
 
-    if(percentage >= 90)
+  //  if(percentage >= 90)
+ //   {
+ //       printf("Grade: A+\n");
+ //   }
+ //   else if(percentage >= 80)
+  //  {
+  //      printf("Grade: A\n");
+  //  }
+  //  else if(percentage >= 70)
+  //  {
+  //      printf("Grade: B\n");
+  //  }
+   // else if(percentage >= 60)
+  //  {
+ //       printf("Grade: C\n");
+  // }
+   //  else if(percentage >=50)
+ //  {
+//    printf("Grade: D\n");
+//   }
+//else {
+   //printf("Grade: Fail");
+//}
+   
+     
+//bank
+
+  
+
+  char name[20];
+  int account_number;
+  int initial_balance;
+  int balance;
+  int amount;
+ 
+
+
+  void createAccount()
+{
+    printf("Enter name: ");
+    scanf("%s", name);
+
+    printf("Enter Account Number: ");
+    scanf("%d", &account_number);
+
+    printf("Enter Initial Balance: ");
+    scanf("%d", &initial_balance);
+
+    balance = initial_balance;
+
+    printf("Account Created\n");
+}
+
+  void checkBalance()
+{
+    printf("Balance = %d\n", balance);
+}
+
+   void depositMoney()
+{
+    printf("Enter Deposit Money: ");
+    scanf("%d", &amount);
+
+    if (amount > 0)
     {
-        printf("Grade: A+\n");
+        balance = balance + amount;
+        printf("Money Deposited\n");
     }
-    else if(percentage >= 80)
+    else
     {
-        printf("Grade: A\n");
+        printf("Invalid Amount\n");
     }
-    else if(percentage >= 70)
+}
+
+   void withdrawMoney()
+{
+    printf("Enter Withdrawal Amount: ");
+    scanf("%d", &amount);
+
+     if (amount > 0 && amount <= balance)
     {
-        printf("Grade: B\n");
+        balance = balance - amount;
+        printf("Money Withdrawn\n");
     }
-    else if(percentage >= 60)
+     else
     {
-        printf("Grade: C\n");
+        printf("Invalid Amount\n");
     }
-    else if(percentage >= 50)
-    {
-        printf("Grade: D\n");
-    }
-    else {
-        printf("Grade: F\n");
-    }
+}
+
+   void accountDetails()
+{
+    printf("\nName = %s\n", name);
+    printf("Account Number = %d\n", account_number);
+    printf("Balance = %d\n", balance);
+}
+
+
+
 
     
 
